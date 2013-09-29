@@ -29,6 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self sentenceManager];
+    if ([_sentenceManager.sentence length] > 0)
+        [self performSegueWithIdentifier:@"Editor" sender:self];
 }
 
 - (void)viewWillAppear: (BOOL)animated
@@ -38,12 +41,21 @@
     }
 }
 
+/* 
+ Action corresponds to a button press on "Go"
+ This stores the entered text into fieldValue, converts into an array of words.
+ A check for minimum number of words is performed and an alert is raised if the sentence is too short.
+ Otherwise save the entered sentence into memory and advance to the Editor view
+ */
+ 
 - (IBAction)saveAndContinue:(id)sender
 {
     NSString *fieldValue = _sentenceField.text;
     NSArray *words = [fieldValue componentsSeparatedByCharactersInSet:
                       [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     [_sentenceField resignFirstResponder];
+    NSLog(@"this is %d", (int)[_sentenceManager.sentence length]);
+
     
     if ([words count] < 5) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -53,10 +65,10 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     } else {
-        //save the word
+        // Saves input text
         _sentenceManager.sentence = fieldValue;
         
-        //advance to the next view
+        // Advances view
         [self performSegueWithIdentifier:@"Editor" sender:self];
     }
     

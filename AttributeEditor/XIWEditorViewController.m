@@ -26,6 +26,7 @@
 
 
 @implementation XIWEditorViewController
+// Initializer for sentenceManager with lazy instantiation
 - (XIWSentenceManager *)sentenceManager
 {
     if (!_sentenceManager)
@@ -43,11 +44,17 @@
     return _words;
 }
 
+// Function corresponding to the stepper
 -(IBAction)selectWord:(id)sender
 {
     [self updateUI];
 }
 
+/* 
+ Gets the value of the wordStepper and stores the corresponding word text into currentWord.
+ Changes highlighting so that the previous word is no longer highlighted
+ and the current word is highlighted yellow.
+ */
 - (void)updateUI
 {
     NSString *currentString = [_words objectAtIndex:(int)self.wordStepper.value];
@@ -57,6 +64,7 @@
     [self addLabelAttributes: @{ NSBackgroundColorAttributeName : [UIColor yellowColor] }];
 }
 
+// Adds attributes to the string specified by the range
 - (void)addLabelAttributes: (NSDictionary *)attributes range:(NSRange)range
 {
     if (range.location != NSNotFound) {
@@ -67,6 +75,7 @@
     }
 }
 
+// Adds attributes to the current string
 - (void)addLabelAttributes: (NSDictionary *)attributes
 {
     NSString *selectedString = [self.words objectAtIndex:(int)self.wordStepper.value];
@@ -75,10 +84,19 @@
     [self addLabelAttributes:attributes range:range];
 }
 
+// Changes color of text
 - (IBAction)changeColor:(UIButton *)sender
 {
     [self addLabelAttributes:@{ NSForegroundColorAttributeName : sender.backgroundColor }];
 }
+
+/* 
+ Loads view
+ Changes the editingLabel to the stored input
+ Sets the wordCount
+ Sets the maximum stepper value by getting the number of words
+ Calls updateUI to highlight the first word
+ */
 
 - (void)viewDidLoad
 {
@@ -86,6 +104,8 @@
 	// Do any additional setup after loading the view.
     _editingLabel.text = self.sentenceManager.sentence;
     _wordCount.text = [NSString stringWithFormat:@"Words: %d", [self.words count]];
+    [_wordStepper setMaximumValue:[self.words count] - 1 ];
+    [self updateUI];
 }
 
 @end
