@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="34" y="-48"/>
         </scene>
-        <!--View Controller - Editor-->
+        <!--Editor View Controller - Editor-->
         <scene sceneID="E9g-gW-iOF">
             <objects>
-                <viewController id="mJz-VM-aky" sceneMemberID="viewController">
+                <viewController id="mJz-VM-aky" customClass="XIWEditorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nDW-d5-z8B"/>
                         <viewControllerLayoutGuide type="bottom" id="T8Q-gg-FtV"/>
@@ -97,6 +97,9 @@
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IVF-gR-VZ1">
                                 <rect key="frame" x="20" y="77" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="selectWord:" destination="mJz-VM-aky" eventType="valueChanged" id="rrA-25-n2Y"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-0G-GVF">
                                 <rect key="frame" x="20" y="263" width="60" height="42"/>
@@ -106,6 +109,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="mJz-VM-aky" eventType="touchUpInside" id="85d-Dq-lXe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHG-MG-8A2">
                                 <rect key="frame" x="240" y="263" width="60" height="42"/>
@@ -115,6 +121,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="mJz-VM-aky" eventType="touchUpInside" id="NIv-mU-Jsh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-Ma-ca8">
                                 <rect key="frame" x="167" y="263" width="60" height="42"/>
@@ -124,6 +133,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="mJz-VM-aky" eventType="touchUpInside" id="N3v-Qy-jos"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-Jz-zow">
                                 <rect key="frame" x="94" y="263" width="60" height="42"/>
@@ -133,6 +145,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="mJz-VM-aky" eventType="touchUpInside" id="FaD-09-GGt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Words: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-0a-ixU">
                                 <rect key="frame" x="20" y="114" width="68" height="21"/>
@@ -150,6 +165,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Editor" id="Fg7-Xa-Nna"/>
+                    <connections>
+                        <outlet property="currentWord" destination="KPh-Rp-LMb" id="FuL-2J-h9V"/>
+                        <outlet property="editingLabel" destination="KzY-zz-pEc" id="3wM-8w-KJB"/>
+                        <outlet property="wordCount" destination="cNc-0a-ixU" id="dKG-Et-pzo"/>
+                        <outlet property="wordStepper" destination="IVF-gR-VZ1" id="FXD-mE-bxO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7w-Wj-ak9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

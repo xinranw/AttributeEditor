@@ -22,6 +22,7 @@
 		CE016BAC17F8B9A900BD1DC3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE016BAB17F8B9A900BD1DC3 /* Storyboard.storyboard */; };
 		CE016BAF17F8BA6000BD1DC3 /* XIWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */; };
 		CE57FE2017F8C2A200EAA7BB /* XIWSentenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57FE1F17F8C2A200EAA7BB /* XIWSentenceManager.m */; };
+		CE57FE2317F8C96E00EAA7BB /* XIWEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57FE2217F8C96E00EAA7BB /* XIWEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWMainViewController.m; sourceTree = "<group>"; };
 		CE57FE1E17F8C2A200EAA7BB /* XIWSentenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWSentenceManager.h; sourceTree = "<group>"; };
 		CE57FE1F17F8C2A200EAA7BB /* XIWSentenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWSentenceManager.m; sourceTree = "<group>"; };
+		CE57FE2117F8C96E00EAA7BB /* XIWEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWEditorViewController.h; sourceTree = "<group>"; };
+		CE57FE2217F8C96E00EAA7BB /* XIWEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				CE016B8B17F8B8F700BD1DC3 /* XIWAppDelegate.h */,
 				CE016B8C17F8B8F700BD1DC3 /* XIWAppDelegate.m */,
 				CE016BAB17F8B9A900BD1DC3 /* Storyboard.storyboard */,
+				CE57FE2117F8C96E00EAA7BB /* XIWEditorViewController.h */,
+				CE57FE2217F8C96E00EAA7BB /* XIWEditorViewController.m */,
 				CE016BAD17F8BA6000BD1DC3 /* XIWMainViewController.h */,
 				CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */,
 				CE57FE1E17F8C2A200EAA7BB /* XIWSentenceManager.h */,
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE016B8917F8B8F700BD1DC3 /* main.m in Sources */,
+				CE57FE2317F8C96E00EAA7BB /* XIWEditorViewController.m in Sources */,
 				CE016BAF17F8BA6000BD1DC3 /* XIWMainViewController.m in Sources */,
 				CE016B8D17F8B8F700BD1DC3 /* XIWAppDelegate.m in Sources */,
 				CE57FE2017F8C2A200EAA7BB /* XIWSentenceManager.m in Sources */,
