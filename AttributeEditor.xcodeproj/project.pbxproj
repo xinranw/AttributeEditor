@@ -19,6 +19,9 @@
 		CE016B9817F8B8F700BD1DC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE016B8017F8B8F600BD1DC3 /* UIKit.framework */; };
 		CE016BA017F8B8F700BD1DC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE016B9E17F8B8F700BD1DC3 /* InfoPlist.strings */; };
 		CE016BA217F8B8F700BD1DC3 /* AttributeEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE016BA117F8B8F700BD1DC3 /* AttributeEditorTests.m */; };
+		CE016BAC17F8B9A900BD1DC3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE016BAB17F8B9A900BD1DC3 /* Storyboard.storyboard */; };
+		CE016BAF17F8BA6000BD1DC3 /* XIWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */; };
+		CE57FE2017F8C2A200EAA7BB /* XIWSentenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57FE1F17F8C2A200EAA7BB /* XIWSentenceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		CE016B9D17F8B8F700BD1DC3 /* AttributeEditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AttributeEditorTests-Info.plist"; sourceTree = "<group>"; };
 		CE016B9F17F8B8F700BD1DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE016BA117F8B8F700BD1DC3 /* AttributeEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeEditorTests.m; sourceTree = "<group>"; };
+		CE016BAB17F8B9A900BD1DC3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CE016BAD17F8BA6000BD1DC3 /* XIWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWMainViewController.h; sourceTree = "<group>"; };
+		CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWMainViewController.m; sourceTree = "<group>"; };
+		CE57FE1E17F8C2A200EAA7BB /* XIWSentenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWSentenceManager.h; sourceTree = "<group>"; };
+		CE57FE1F17F8C2A200EAA7BB /* XIWSentenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWSentenceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,11 @@
 			children = (
 				CE016B8B17F8B8F700BD1DC3 /* XIWAppDelegate.h */,
 				CE016B8C17F8B8F700BD1DC3 /* XIWAppDelegate.m */,
+				CE016BAB17F8B9A900BD1DC3 /* Storyboard.storyboard */,
+				CE016BAD17F8BA6000BD1DC3 /* XIWMainViewController.h */,
+				CE016BAE17F8BA6000BD1DC3 /* XIWMainViewController.m */,
+				CE57FE1E17F8C2A200EAA7BB /* XIWSentenceManager.h */,
+				CE57FE1F17F8C2A200EAA7BB /* XIWSentenceManager.m */,
 				CE016B8E17F8B8F700BD1DC3 /* Images.xcassets */,
 				CE016B8317F8B8F600BD1DC3 /* Supporting Files */,
 			);
@@ -222,6 +235,7 @@
 			files = (
 				CE016B8717F8B8F700BD1DC3 /* InfoPlist.strings in Resources */,
 				CE016B8F17F8B8F700BD1DC3 /* Images.xcassets in Resources */,
+				CE016BAC17F8B9A900BD1DC3 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE016B8917F8B8F700BD1DC3 /* main.m in Sources */,
+				CE016BAF17F8BA6000BD1DC3 /* XIWMainViewController.m in Sources */,
 				CE016B8D17F8B8F700BD1DC3 /* XIWAppDelegate.m in Sources */,
+				CE57FE2017F8C2A200EAA7BB /* XIWSentenceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +452,7 @@
 				CE016BA717F8B8F700BD1DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE016BA817F8B8F700BD1DC3 /* Build configuration list for PBXNativeTarget "AttributeEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +461,7 @@
 				CE016BAA17F8B8F700BD1DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
