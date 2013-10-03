@@ -13,7 +13,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *sentenceField;
 @property (nonatomic, strong) XIWSentenceManager *sentenceManager;
 
-
+- (IBAction) clearText:(id)sender;
 - (IBAction) saveAndContinue:(id)sender;
 @end
 
@@ -61,8 +61,6 @@
     NSArray *words = [fieldValue componentsSeparatedByCharactersInSet:
                       [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     [_sentenceField resignFirstResponder];
-    NSLog(@"this is %d", (int)[_sentenceManager.sentence length]);
-
     
     if ([words count] < 5) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -79,6 +77,16 @@
         [self performSegueWithIdentifier:@"Editor" sender:self];
     }
     
+}
+
+/*
+ Clears the input area and clears the previous stored text form memory
+ */
+- (IBAction)clearText:(id)sender
+{
+    NSString *emptyField = @"";
+    _sentenceField.text = emptyField;
+    _sentenceManager.sentence = emptyField;
 }
 
 @end

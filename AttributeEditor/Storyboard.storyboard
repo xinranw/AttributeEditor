@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srE-QH-yft">
-                                <rect key="frame" x="215" y="254" width="85" height="37"/>
+                                <rect key="frame" x="215" y="265" width="85" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.33381789302975751" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Go">
@@ -61,6 +61,18 @@
                                 </state>
                                 <connections>
                                     <action selector="saveAndContinue:" destination="q5v-eY-ZH1" eventType="touchUpInside" id="tem-9I-qQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-Fc-aMk">
+                                <rect key="frame" x="20" y="265" width="85" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="q5v-eY-ZH1" eventType="touchUpInside" id="2C1-bf-fPr"/>
                                 </connections>
                             </button>
                         </subviews>
