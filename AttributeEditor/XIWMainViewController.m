@@ -29,6 +29,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    // Set background image
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [backgroundView setImage:[UIImage imageNamed:@"bg_blue_checkered.png"]];
+    backgroundView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:backgroundView];
+    [self.view sendSubviewToBack:backgroundView];
+    
     [self sentenceManager];
     if ([_sentenceManager.sentence length] > 0)
         [self performSegueWithIdentifier:@"Editor" sender:self];

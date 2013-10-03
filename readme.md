@@ -1,11 +1,6 @@
 Welcome to AttributeEditor
 ======
 
-This is a basic calculator app with support for +, -, *, /, sign reveral, and percentage calculations.
-
-How do I use it?
-------
-
 Bugs
 ------
 Repeated words:
